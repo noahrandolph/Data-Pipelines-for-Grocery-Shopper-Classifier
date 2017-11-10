@@ -1,4 +1,6 @@
-ave my current directory
+#! /bin/bash
+
+# save my current directory
 MY_CWD=$(pwd)
 
 # creating staging directory
