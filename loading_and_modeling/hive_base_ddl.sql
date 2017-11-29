@@ -98,6 +98,7 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/grocery_shopper_classifier/insta_departments';
 
+
 DROP TABLE insta_aisles;
 
 CREATE EXTERNAL TABLE insta_aisles
@@ -114,6 +115,7 @@ WITH SERDEPROPERTIES (
 
 STORED AS TEXTFILE
 LOCATION '/user/w205/grocery_shopper_classifier/insta_aisles';
+
 
 DROP TABLE d_trans;
 
@@ -142,16 +144,17 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/grocery_shopper_classifier/dh_transaction_data';
 
+
 DROP TABLE d_product;
 
 CREATE EXTERNAL TABLE d_product
 (
 product_id string,
+manufacturer string,
 department string,
+brand string,
 commodity_desc string,
 sub_commodity_desc string,
-manufacturer string,
-brand string,
 curr_size_of_product string
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
@@ -164,3 +167,20 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/grocery_shopper_classifier/dh_product';
 
+
+DROP TABLE product_map;
+
+CREATE EXTERNAL TABLE product_map
+(
+commodity_desc string,
+insta_aisle string
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+"separatorChar" = ",",
+"quoteChar" = '"',
+"escapeChar" = '\\'
+)
+
+STORED AS TEXTFILE
+LOCATION '/user/w205/grocery_shopper_classifier/product_mapping';

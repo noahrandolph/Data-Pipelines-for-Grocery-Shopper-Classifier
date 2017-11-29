@@ -30,6 +30,7 @@ hdfs dfs -rm /user/w205/grocery_shopper_classifier/dh_coupon/dh_coupon.csv
 hdfs dfs -rm /user/w205/grocery_shopper_classifier/dh_hh_demographic/dh_hh_demographic.csv
 hdfs dfs -rm /user/w205/grocery_shopper_classifier/dh_product/dh_product.csv
 hdfs dfs -rm /user/w205/grocery_shopper_classifier/dh_transaction_data/dh_transaction_data.csv
+hdfs dfs -rm /user/w205/grocery_shopper_classifier/product_mapping/product_mapping.csv
 
 # remove hdfs hospital_compare directory and sub-directories
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/insta_aisles
@@ -47,6 +48,7 @@ hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/dh_coupon
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/dh_hh_demographic
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/dh_product
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/dh_transaction_data
+hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/product_mapping
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier
 
 # change directory back to the original
