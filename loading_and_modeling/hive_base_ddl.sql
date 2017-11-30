@@ -1,4 +1,4 @@
-OP TABLE insta_products;
+DROP TABLE insta_products;
 
 CREATE EXTERNAL TABLE insta_products
 (
@@ -128,11 +128,11 @@ product_id string,
 quantity string,
 sales_value string,
 store_id string,
-coupon_match_disc string,
-coupon_disc string,
 retail_disc string,
 trans_time string,
-week_no string
+week_no string,
+coupon_disc string,
+coupon_match_disc string
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
