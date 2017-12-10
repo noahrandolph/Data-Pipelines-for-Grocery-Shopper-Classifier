@@ -1,3 +1,4 @@
+
 DROP TABLE
 dh_entries;
 
@@ -5,6 +6,8 @@ CREATE TABLE
 dh_entries AS
 SELECT 
 d_trans.basket_id AS basket_id,
+d_trans.day AS day,
+cast(round(d_trans.trans_time/100) as int) AS hour_of_day,
 d_product.commodity_desc AS commodity_desc
 FROM d_trans
 JOIN d_product
@@ -18,17 +21,34 @@ CREATE TABLE
 dh_entries_names_merged AS
 SELECT 
 product_map.insta_aisle AS product,
-dh_entries.basket_id AS basket_id
+dh_entries.basket_id AS basket_id,
+dh_entries.day AS day,
+dh_entries.hour_of_day AS hour_of_day
 FROM product_map
 JOIN dh_entries
 ON dh_entries.commodity_desc = product_map.commodity_desc;
 
 
 DROP TABLE
-dh_orders;
+dh_entries_day_of_week;
 
 CREATE TABLE
-dh_orders AS
+dh_entries_day_of_week AS
+SELECT
+dh_entries_names_merged.product AS product,
+dh_entries_names_merged.basket_id AS basket_id,
+dh_day_of_week.day_of_week AS day_of_week,
+dh_entries_names_merged.hour_of_day AS hour_of_day
+FROM dh_entries_names_merged
+JOIN dh_day_of_week
+ON dh_entries_names_merged.day = dh_day_of_week.day;
+
+
+DROP TABLE
+dh_orders_1_hot;
+
+CREATE TABLE
+dh_orders_1_hot AS
 SELECT basket_id,
 SUM(CASE WHEN product = 'air fresheners candles' THEN quantity ELSE 0 END) AS air_fresheners_candles,
 SUM(CASE WHEN product = 'asian foods' THEN quantity ELSE 0 END) AS asian_foods,
@@ -148,3 +168,120 @@ FROM (
 GROUP BY basket_id;
 
 
+DROP TABLE dh_orders;
+
+CREATE TABLE dh_orders as
+SELECT
+dh_orders_1_hot.basket_id as basket_id,
+dh_entries_day_of_week.day_of_week as day_of_week,
+dh_entries_day_of_week.hour_of_day as hour_of_day,
+dh_orders_1_hot.air_fresheners_candles as air_fresheners_candles,
+dh_orders_1_hot.asian_foods as asian_foods,
+dh_orders_1_hot.baby_bath_body_care as baby_bath_body_care,
+dh_orders_1_hot.baby_food_formula as baby_food_formula,
+dh_orders_1_hot.bakery_desserts as bakery_desserts,
+dh_orders_1_hot.baking_ingredients as baking_ingredients,
+dh_orders_1_hot.baking_supplies_decor as baking_supplies_decor,
+dh_orders_1_hot.beauty as beauty,
+dh_orders_1_hot.beers_coolers as beers_coolers,
+dh_orders_1_hot.body_lotions_soap as body_lotions_soap,
+dh_orders_1_hot.bread as bread,
+dh_orders_1_hot.breakfast_bakery as breakfast_bakery,
+dh_orders_1_hot.breakfast_bars_pastries as breakfast_bars_pastries,
+dh_orders_1_hot.bulk_dried_fruits_vegetables as bulk_dried_fruits_vegetables,
+dh_orders_1_hot.bulk_grains_rice_dried_goods as bulk_grains_rice_dried_goods,
+dh_orders_1_hot.buns_rolls as buns_rolls,
+dh_orders_1_hot.butter as butter,
+dh_orders_1_hot.candy_chocolate as candy_chocolate,
+dh_orders_1_hot.canned_fruit_applesauce as canned_fruit_applesauce,
+dh_orders_1_hot.canned_meals_beans as canned_meals_beans,
+dh_orders_1_hot.canned_meat_seafood as canned_meat_seafood,
+dh_orders_1_hot.cat_food_care as cat_food_care,
+dh_orders_1_hot.cereal as cereal,
+dh_orders_1_hot.chips_pretzels as chips_pretzels,
+dh_orders_1_hot.cleaning_products as cleaning_products,
+dh_orders_1_hot.cocoa_drink_mixes as cocoa_drink_mixes,
+dh_orders_1_hot.coffee as coffee,
+dh_orders_1_hot.cold_flu_allergy as cold_flu_allergy,
+dh_orders_1_hot.condiments as condiments,
+dh_orders_1_hot.cookies_cakes as cookies_cakes,
+dh_orders_1_hot.crackers as crackers,
+dh_orders_1_hot.deodorants as deodorants,
+dh_orders_1_hot.diapers_wipes as diapers_wipes,
+dh_orders_1_hot.digestion as digestion,
+dh_orders_1_hot.dish_detergents as dish_detergents,
+dh_orders_1_hot.dog_food_care as dog_food_care,
+dh_orders_1_hot.doughs_gelatins_bake_mixes as doughs_gelatins_bake_mixes,
+dh_orders_1_hot.dry_pasta as dry_pasta,
+dh_orders_1_hot.eggs as eggs,
+dh_orders_1_hot.energy_sports_drinks as energy_sports_drinks,
+dh_orders_1_hot.eye_ear_care as eye_ear_care,
+dh_orders_1_hot.facial_care as facial_care,
+dh_orders_1_hot.feminine_care as feminine_care,
+dh_orders_1_hot.first_aid as first_aid,
+dh_orders_1_hot.fresh_fruits as fresh_fruits,
+dh_orders_1_hot.fresh_herbs as fresh_herbs,
+dh_orders_1_hot.fresh_vegetables as fresh_vegetables,
+dh_orders_1_hot.frozen_appetizers_sides as frozen_appetizers_sides,
+dh_orders_1_hot.frozen_breads_doughs as frozen_breads_doughs,
+dh_orders_1_hot.frozen_breakfast as frozen_breakfast,
+dh_orders_1_hot.frozen_dessert as frozen_dessert,
+dh_orders_1_hot.frozen_juice as frozen_juice,
+dh_orders_1_hot.frozen_meals as frozen_meals,
+dh_orders_1_hot.frozen_meat_seafood as frozen_meat_seafood,
+dh_orders_1_hot.frozen_pizza as frozen_pizza,
+dh_orders_1_hot.frozen_produce as frozen_produce,
+dh_orders_1_hot.frozen_vegan_vegetarian as frozen_vegan_vegetarian,
+dh_orders_1_hot.fruit_vegetable_snacks as fruit_vegetable_snacks,
+dh_orders_1_hot.grain as grain,
+dh_orders_1_hot.hair_care as hair_care,
+dh_orders_1_hot.honeys_syrups_nectars as honeys_syrups_nectars,
+dh_orders_1_hot.hot_cereal_pancake_mixes as hot_cereal_pancake_mixes,
+dh_orders_1_hot.hot_dogs_bacon_sausage as hot_dogs_bacon_sausage,
+dh_orders_1_hot.ice_cream_ice as ice_cream_ice,
+dh_orders_1_hot.juice_nectars as juice_nectars,
+dh_orders_1_hot.kitchen_supplies as kitchen_supplies,
+dh_orders_1_hot.latino_foods as latino_foods,
+dh_orders_1_hot.laundry as laundry,
+dh_orders_1_hot.lunch_meat as lunch_meat,
+dh_orders_1_hot.marinades_meat_preparation as marinades_meat_preparation,
+dh_orders_1_hot.milk as milk,
+dh_orders_1_hot.more_household as more_household,
+dh_orders_1_hot.muscles_joints_pain_relief as muscles_joints_pain_relief,
+dh_orders_1_hot.nuts_seeds_dried_fruit as nuts_seeds_dried_fruit,
+dh_orders_1_hot.oils_vinegars as oils_vinegars,
+dh_orders_1_hot.oral_hygiene as oral_hygiene,
+dh_orders_1_hot.other_creams_cheeses as other_creams_cheeses,
+dh_orders_1_hot.packaged_cheese as packaged_cheese,
+dh_orders_1_hot.packaged_meat as packaged_meat,
+dh_orders_1_hot.packaged_seafood as packaged_seafood,
+dh_orders_1_hot.packaged_vegetables_fruits as packaged_vegetables_fruits,
+dh_orders_1_hot.paper_goods as paper_goods,
+dh_orders_1_hot.pasta_sauce as pasta_sauce,
+dh_orders_1_hot.pickled_goods_olives as pickled_goods_olives,
+dh_orders_1_hot.plates_bowls_cups_flatware as plates_bowls_cups_flatware,
+dh_orders_1_hot.prepared_meals as prepared_meals,
+dh_orders_1_hot.prepared_soups_salads as prepared_soups_salads,
+dh_orders_1_hot.preserved_dips_spreads as preserved_dips_spreads,
+dh_orders_1_hot.salad_dressing_toppings as salad_dressing_toppings,
+dh_orders_1_hot.seafood_counter as seafood_counter,
+dh_orders_1_hot.shave_needs as shave_needs,
+dh_orders_1_hot.soap as soap,
+dh_orders_1_hot.soft_drinks as soft_drinks,
+dh_orders_1_hot.soup_broth_bouillon as soup_broth_bouillon,
+dh_orders_1_hot.soy_lactosefree as soy_lactosefree,
+dh_orders_1_hot.specialty_wines_champagnes as specialty_wines_champagnes,
+dh_orders_1_hot.spices_seasonings as spices_seasonings,
+dh_orders_1_hot.spirits as spirits,
+dh_orders_1_hot.spreads as spreads,
+dh_orders_1_hot.tea as tea,
+dh_orders_1_hot.trail_mix_snack_mix as trail_mix_snack_mix,
+dh_orders_1_hot.trash_bags_liners as trash_bags_liners,
+dh_orders_1_hot.vitamins_supplements as vitamins_supplements,
+dh_orders_1_hot.water_seltzer_sparkling_water as water_seltzer_sparkling_water,
+dh_orders_1_hot.white_wines as white_wines,
+dh_orders_1_hot.yogurt as yogurt,
+dh_orders_1_hot.dataset as dataset
+FROM dh_orders_1_hot
+JOIN dh_entries_day_of_week
+ON dh_orders_1_hot.basket_id = dh_entries_day_of_week.basket_id;

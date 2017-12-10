@@ -1,4 +1,7 @@
-ave my current directory
+
+#! /bin/bash
+
+# save my current directory
 MY_CWD=$(pwd)
 
 # creating staging directory
@@ -34,6 +37,11 @@ wget "$MY_URL" -O dunnhumby.zip
 # product mapping between Dunnhumby and Instacart
 MY_URL="https://s3.amazonaws.com/w205datasource/product_mapping.csv"
 wget "$MY_URL" -O name_mapping.csv
+
+# get files from Amazon S3
+# Dunnhumby days of the week
+MY_URL="https://s3.amazonaws.com/w205datasource/dh_days_of_week.csv"
+wget "$MY_URL" -O days_of_week.csv
 
 #unzip the instacart data
 unzip aisles.zip -x __MACOSX/*
@@ -130,10 +138,17 @@ tail -n +2 "$OLD_FILE_15" >$NEW_FILE_15
 # change back to staging/project directory for access to product_mapping & Instacart files
 cd /data/staging/project
 
+#16
 # remove first line (header) of product_mappping.csv
 OLD_FILE_16="name_mapping.csv"
 NEW_FILE_16="product_mapping.csv"
 tail -n +2 "$OLD_FILE_16" >$NEW_FILE_16
+
+#17
+# remove first line (header) of days_of_week.csv
+OLD_FILE_17="days_of_week.csv"
+NEW_FILE_17="dh_days_of_week.csv"
+tail -n +2 "$OLD_FILE_17" >$NEW_FILE_17
 
 # create our main grocery shopper classifier hdfs directory
 hdfs dfs -mkdir /user/w205/grocery_shopper_classifier
@@ -208,6 +223,10 @@ cd /data/staging/project
 #16
 hdfs dfs -mkdir /user/w205/grocery_shopper_classifier/product_mapping
 hdfs dfs -put $NEW_FILE_16 /user/w205/grocery_shopper_classifier/product_mapping
+
+#17
+hdfs dfs -mkdir /user/w205/grocery_shopper_classifier/dh_days_of_week
+hdfs dfs -put $NEW_FILE_17 /user/w205/grocery_shopper_classifier/dh_days_of_week
 
 # change directory back to the original
 cd $MY_CWD

@@ -1,3 +1,4 @@
+
 DROP TABLE insta_products;
 
 CREATE EXTERNAL TABLE insta_products
@@ -184,3 +185,21 @@ WITH SERDEPROPERTIES (
 
 STORED AS TEXTFILE
 LOCATION '/user/w205/grocery_shopper_classifier/product_mapping';
+
+
+DROP TABLE dh_day_of_week;
+
+CREATE EXTERNAL TABLE dh_day_of_week
+(
+day string,
+day_of_week string
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+"separatorChar" = ",",
+"quoteChar" = '"',
+"escapeChar" = '\\'
+)
+
+STORED AS TEXTFILE
+LOCATION '/user/w205/grocery_shopper_classifier/dh_days_of_week';
