@@ -13,6 +13,17 @@ FROM d_trans
 JOIN d_product
 ON d_trans.product_id = d_product.product_id;
 
+DROP TABLE
+fix_hours;
+
+CREATE TABLE
+fix_hours AS
+SELECT
+basket_id,
+day,
+CASE WHEN hour_of_day = 24 THEN 0 ELSE hour_of_day END AS hour_of_day,
+commodity_desc
+FROM dh_entries;
 
 DROP TABLE
 dh_entries_names_merged;
@@ -21,12 +32,12 @@ CREATE TABLE
 dh_entries_names_merged AS
 SELECT 
 product_map.insta_aisle AS product,
-dh_entries.basket_id AS basket_id,
-dh_entries.day AS day,
-dh_entries.hour_of_day AS hour_of_day
+fix_hours.basket_id AS basket_id,
+fix_hours.day AS day,
+fix_hours.hour_of_day AS hour_of_day
 FROM product_map
-JOIN dh_entries
-ON dh_entries.commodity_desc = product_map.commodity_desc;
+JOIN fix_hours
+ON fix_hours.commodity_desc = product_map.commodity_desc;
 
 
 DROP TABLE
@@ -156,7 +167,7 @@ SUM(CASE WHEN product = 'vitamins supplements' THEN quantity ELSE NULL END) AS v
 SUM(CASE WHEN product = 'water seltzer sparkling water' THEN quantity ELSE NULL END) AS water_seltzer_sparkling_water,
 SUM(CASE WHEN product = 'white wines' THEN quantity ELSE NULL END) AS white_wines,
 SUM(CASE WHEN product = 'yogurt' THEN quantity ELSE NULL END) AS yogurt,
-'1' as dataset
+'dunnhumby' as dataset
 FROM (
  SELECT 
  basket_id,
@@ -173,8 +184,8 @@ DROP TABLE dh_orders;
 CREATE TABLE dh_orders as
 SELECT
 dh_orders_1_hot.basket_id as basket_id,
-dh_entries_day_of_week.day_of_week as day_of_week,
-dh_entries_day_of_week.hour_of_day as hour_of_day,
+CAST(dh_entries_day_of_week.day_of_week AS bigint) as day_of_week,
+CAST(dh_entries_day_of_week.hour_of_day AS bigint) as hour_of_day,
 dh_orders_1_hot.air_fresheners_candles as air_fresheners_candles,
 dh_orders_1_hot.asian_foods as asian_foods,
 dh_orders_1_hot.baby_bath_body_care as baby_bath_body_care,

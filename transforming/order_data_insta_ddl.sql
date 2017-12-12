@@ -140,7 +140,7 @@ SUM(CASE WHEN product = 'vitamins supplements' THEN quantity ELSE NULL END) AS v
 SUM(CASE WHEN product = 'water seltzer sparkling water' THEN quantity ELSE NULL END) AS water_seltzer_sparkling_water,
 SUM(CASE WHEN product = 'white wines' THEN quantity ELSE NULL END) AS white_wines,
 SUM(CASE WHEN product = 'yogurt' THEN quantity ELSE NULL END) AS yogurt,
-'0' as dataset
+'instacart' as dataset
 FROM (
  SELECT
  order_id,
@@ -157,8 +157,8 @@ DROP TABLE i_orders;
 CREATE TABLE i_orders as
 SELECT
 i_orders_1_hot.basket_id as basket_id,
-insta_orders.order_dow as day_of_week,
-insta_orders.order_hour_of_day as hour_of_day,
+CAST(insta_orders.order_dow AS bigint) as day_of_week,
+CAST(insta_orders.order_hour_of_day AS bigint) as hour_of_day,
 i_orders_1_hot.air_fresheners_candles as air_fresheners_candles,
 i_orders_1_hot.asian_foods as asian_foods,
 i_orders_1_hot.baby_bath_body_care as baby_bath_body_care,
