@@ -176,7 +176,7 @@ FROM (
  FROM dh_entries_names_merged
  GROUP BY basket_id, product
 ) sub
-GROUP BY basket_id;
+GROUP BY basket_id; 
 
 
 DROP TABLE dh_orders;
@@ -184,8 +184,8 @@ DROP TABLE dh_orders;
 CREATE TABLE dh_orders as
 SELECT
 dh_orders_1_hot.basket_id as basket_id,
-CAST(dh_entries_day_of_week.day_of_week AS bigint) as day_of_week,
-CAST(dh_entries_day_of_week.hour_of_day AS bigint) as hour_of_day,
+CAST(dh_entries_day_of_week_updated.day_of_week AS bigint) as day_of_week,
+CAST(dh_entries_day_of_week_updated.hour_of_day AS bigint) as hour_of_day,
 dh_orders_1_hot.air_fresheners_candles as air_fresheners_candles,
 dh_orders_1_hot.asian_foods as asian_foods,
 dh_orders_1_hot.baby_bath_body_care as baby_bath_body_care,
@@ -294,5 +294,5 @@ dh_orders_1_hot.white_wines as white_wines,
 dh_orders_1_hot.yogurt as yogurt,
 dh_orders_1_hot.dataset as dataset
 FROM dh_orders_1_hot
-JOIN dh_entries_day_of_week
-ON dh_orders_1_hot.basket_id = dh_entries_day_of_week.basket_id;
+JOIN (SELECT distinct basket_id, day_of_week, hour_of_day from dh_entries_day_of_week) dh_entries_day_of_week_updated
+ON dh_orders_1_hot.basket_id = dh_entries_day_of_week_updated.basket_id;
