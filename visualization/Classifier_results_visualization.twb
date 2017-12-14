@@ -1,0 +1,760 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.1003.0840                               -->
+<workbook original-version='10.3' source-build='10.3.4 (10300.17.1003.0840)' source-platform='win' version='10.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='ec2-34-204-45-80.compute-1.amazonaws.com' inline='true' name='federated.1m0h26w18zgyt21a536930q6d2lk' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ec2-34-204-45-80.compute-1.amazonaws.com' name='hadoophive.0q4qlvd0bwo0q61ek1n7o1t1mldd'>
+            <connection authentication='yes' authentication-type='2' class='hadoophive' connection-type='2' dbname='' odbc-connect-string-extras='' one-time-sql='' port='10000' schema='default' server='ec2-34-204-45-80.compute-1.amazonaws.com' sslcert='' sslmode='' transport-type='1' username='root'>
+              <connection-customization class='hadoophive' enabled='false' version='10.3'>
+                <vendor name='hadoophive' />
+                <driver name='hadoophive' />
+                <customizations>
+                  <customization name='CAP_AUTH_DB_IMPERSONATE' value='yes' />
+                  <customization name='CAP_AUTH_KERBEROS_IMPERSONATE' value='yes' />
+                  <customization name='CAP_CONNECT_STORED_PROCEDURE' value='no' />
+                  <customization name='CAP_CREATE_TEMP_TABLES' value='no' />
+                  <customization name='CAP_DATASERVER_MAGIC_NUMBER' value='no' />
+                  <customization name='CAP_DEFERS_CONNECTION_VERIFICATION' value='no' />
+                  <customization name='CAP_DISABLE_EXTRACT_TABLE_INDEXING' value='no' />
+                  <customization name='CAP_FAST_METADATA' value='no' />
+                  <customization name='CAP_HIVE_FIX_METADATA_NAMES' value='yes' />
+                  <customization name='CAP_INDEX_TEMP_TABLES' value='no' />
+                  <customization name='CAP_INSERT_TEMP_EXEC_STORED_PROCEDURE' value='no' />
+                  <customization name='CAP_LOCAL_ALIASES_CASE_INSENSITIVE' value='no' />
+                  <customization name='CAP_ODBC_ALWAYS_THROW_CONNECT_ERRORS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_DATETIME_AS_CHAR' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_DATE_AS_CHAR' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_MAX_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_MEDIUM_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_SIGNED' value='yes' />
+                  <customization name='CAP_ODBC_BIND_FORCE_SMALL_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_INT64' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_PREFERRED_TYPES' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_WIDE_CHAR' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_DYNAMIC' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_FORWARD_ONLY' value='yes' />
+                  <customization name='CAP_ODBC_CURSOR_KEYSET_DRIVEN' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_STATIC' value='no' />
+                  <customization name='CAP_ODBC_DRIVER_HIVE_ASSUME_LATEST' value='no' />
+                  <customization name='CAP_ODBC_ERROR_IGNORE_FALSE_ALARM' value='no' />
+                  <customization name='CAP_ODBC_FETCH_BUFFERS_RESIZABLE' value='yes' />
+                  <customization name='CAP_ODBC_FETCH_BUFFERS_SIZE_MASSIVE' value='no' />
+                  <customization name='CAP_ODBC_FETCH_CONTINUE_ON_ERROR' value='no' />
+                  <customization name='CAP_ODBC_FORCE_SINGLE_ROW_BINDING' value='no' />
+                  <customization name='CAP_ODBC_METADATA_STRING_LENGTH_UNKNOWN' value='yes' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLCOLUMNS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLFOREIGNKEYS_API' value='yes' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLPRIMARYKEYS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLSTATISTICS_API' value='yes' />
+                  <customization name='CAP_ODBC_REBIND_SKIP_UNBIND' value='no' />
+                  <customization name='CAP_ODBC_TRIM_VARCHAR_PADDING' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_AUTO' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_BATCH' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_EACH' value='yes' />
+                  <customization name='CAP_ODBC_USE_NATIVE_PROTOCOL' value='no' />
+                  <customization name='CAP_QUERY_ALLOW_PARTIAL_AGGREGATION' value='yes' />
+                  <customization name='CAP_QUERY_ALWAYS_USE_AQ_CACHE' value='no' />
+                  <customization name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES' value='no' />
+                  <customization name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES' value='yes' />
+                  <customization name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES' value='yes' />
+                  <customization name='CAP_QUERY_BOOLEXPR_TO_INTEXPR' value='no' />
+                  <customization name='CAP_QUERY_BOOL_IDENTIFIER_TO_LOGICAL' value='no' />
+                  <customization name='CAP_QUERY_EMPTY_DOMAIN_TOP' value='no' />
+                  <customization name='CAP_QUERY_FORCE_AGGREGATE_MEASURES' value='no' />
+                  <customization name='CAP_QUERY_GROUP_BY_ALIAS' value='no' />
+                  <customization name='CAP_QUERY_GROUP_BY_DEGREE' value='no' />
+                  <customization name='CAP_QUERY_HAVING_REQUIRES_GROUP_BY' value='no' />
+                  <customization name='CAP_QUERY_HAVING_UNSUPPORTED' value='no' />
+                  <customization name='CAP_QUERY_JOIN_ACROSS_SCHEMAS' value='no' />
+                  <customization name='CAP_QUERY_JOIN_ASSUME_CONSTRAINED' value='no' />
+                  <customization name='CAP_QUERY_JOIN_PUSH_DOWN_CONDITION_EXPRESSIONS' value='no' />
+                  <customization name='CAP_QUERY_JOIN_REQUIRES_SCOPE' value='no' />
+                  <customization name='CAP_QUERY_JOIN_REQUIRES_SUBQUERY' value='no' />
+                  <customization name='CAP_QUERY_NULL_REQUIRES_CAST' value='no' />
+                  <customization name='CAP_QUERY_RECOMPILE_FAILED_QUERY' value='no' />
+                  <customization name='CAP_QUERY_SELECT_ALIASES_SORTED' value='no' />
+                  <customization name='CAP_QUERY_SORT_BY' value='yes' />
+                  <customization name='CAP_QUERY_SORT_BY_DEGREE' value='no' />
+                  <customization name='CAP_QUERY_SUBQUERIES' value='yes' />
+                  <customization name='CAP_QUERY_SUBQUERIES_WITH_TOP' value='yes' />
+                  <customization name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT' value='yes' />
+                  <customization name='CAP_QUERY_SUPPORTS_LODJOINS' value='yes' />
+                  <customization name='CAP_QUERY_SUPPRESS_CHECK_DOMAIN_LITERALS_THRESHOLD' value='no' />
+                  <customization name='CAP_QUERY_SUPPRESS_NULL_CHECK_QUERIES' value='no' />
+                  <customization name='CAP_QUERY_TOPSTYLE_LIMIT' value='no' />
+                  <customization name='CAP_QUERY_TOPSTYLE_ROWNUM' value='no' />
+                  <customization name='CAP_QUERY_TOPSTYLE_TOP' value='no' />
+                  <customization name='CAP_QUERY_TOP_0_METADATA' value='yes' />
+                  <customization name='CAP_QUERY_TOP_N' value='yes' />
+                  <customization name='CAP_QUERY_USE_DOMAIN_RANGES_OPTIMIZATION' value='yes' />
+                  <customization name='CAP_QUERY_USE_QUERY_FUSION' value='yes' />
+                  <customization name='CAP_QUERY_WHERE_FALSE_METADATA' value='no' />
+                  <customization name='CAP_SELECT_INTO' value='no' />
+                  <customization name='CAP_SELECT_TOP_INTO' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_PREFER_TEMP_TABLE' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_REPAIR_TEMP_TABLE_STRINGS' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_TEMP_TABLE_FROM_BUFFER' value='no' />
+                  <customization name='CAP_STORED_PROCEDURE_TEMP_TABLE_FROM_NEW_PROTOCOL' value='no' />
+                  <customization name='CAP_SUPPRESS_CONNECTION_POOLING' value='yes' />
+                  <customization name='CAP_SUPPRESS_DISCOVERY_QUERIES' value='no' />
+                  <customization name='CAP_SUPPRESS_GET_SERVER_TIME' value='yes' />
+                  <customization name='CAP_SUPPRESS_QUICK_FILTER_ACCELERATION_VIEWS' value='no' />
+                </customizations>
+              </connection-customization>
+            </connection>
+          </named-connection>
+        </named-connections>
+        <relation connection='hadoophive.0q4qlvd0bwo0q61ek1n7o1t1mldd' name='classifier_results' table='[default].[classifier_results]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>row_no</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[row_no]</local-name>
+            <parent-name>[classifier_results]</parent-name>
+            <remote-alias>row_no</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>basket_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[basket_id]</local-name>
+            <parent-name>[classifier_results]</parent-name>
+            <remote-alias>basket_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>true_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[true_category]</local-name>
+            <parent-name>[classifier_results]</parent-name>
+            <remote-alias>true_category</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>predicted_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[predicted_category]</local-name>
+            <parent-name>[classifier_results]</parent-name>
+            <remote-alias>predicted_category</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Basket Id' datatype='string' name='[basket_id]' role='dimension' type='nominal' />
+      <column caption='Predicted Category' datatype='string' name='[predicted_category]' role='dimension' type='nominal' />
+      <column caption='Row No' datatype='string' name='[row_no]' role='dimension' type='nominal' />
+      <column caption='True Category' datatype='string' name='[true_category]' role='dimension' type='nominal' />
+      <column-instance column='[basket_id]' derivation='None' name='[none:basket_id:nk]' pivot='key' type='nominal' />
+      <column-instance column='[predicted_category]' derivation='None' name='[none:predicted_category:nk]' pivot='key' type='nominal' />
+      <group hidden='true' name='[Exclusions (Basket Id,Predicted Category)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:basket_id:nk]' />
+          <groupfilter function='level-members' level='[none:predicted_category:nk]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:/Users/ashaa/MIDS/Fall 17/DS&amp;R/Project/classifier_results.tde' schema='Extract' tablename='Extract' update-time='12/14/2017 08:03:23 PM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='101' timestamp-start='2017-12-14 20:03:23.836' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>0</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>101.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>101</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>101.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>basket_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[basket_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>basket_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>classifier_results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>101</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='binary' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;100&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;basket_id&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>101</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>predicted_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[predicted_category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>predicted_category</remote-alias>
+              <ordinal>2</ordinal>
+              <family>classifier_results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='binary' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;dunnhumby&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;predicted_category&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>101</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>row_no</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[row_no]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>row_no</remote-alias>
+              <ordinal>3</ordinal>
+              <family>classifier_results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>101</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='binary' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;99&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>101</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>true_category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[true_category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>true_category</remote-alias>
+              <ordinal>4</ordinal>
+              <family>classifier_results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='binary' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;dunnhumby&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;true_category&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>101</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;binary&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.57208' measure-ordering='alphabetic' measure-percentage='0.42792' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:predicted_category:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;dunnhumby&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;predicted_category&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;instacart&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Classifier Performance'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ec2-34-204-45-80.compute-1.amazonaws.com' name='federated.1m0h26w18zgyt21a536930q6d2lk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m0h26w18zgyt21a536930q6d2lk'>
+            <column caption='Basket Id' datatype='string' name='[basket_id]' role='dimension' type='nominal' />
+            <column-instance column='[basket_id]' derivation='None' name='[none:basket_id:nk]' pivot='key' type='nominal' />
+            <column-instance column='[predicted_category]' derivation='None' name='[none:predicted_category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[true_category]' derivation='None' name='[none:true_category:nk]' pivot='key' type='nominal' />
+            <column caption='Predicted Category' datatype='string' name='[predicted_category]' role='dimension' type='nominal' />
+            <column caption='True Category' datatype='string' name='[true_category]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]' value='148' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1m0h26w18zgyt21a536930q6d2lk].[none:true_category:nk] / [federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk])</rows>
+        <cols>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Shopper Classifier'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ec2-34-204-45-80.compute-1.amazonaws.com' name='federated.1m0h26w18zgyt21a536930q6d2lk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m0h26w18zgyt21a536930q6d2lk'>
+            <column caption='Basket Id' datatype='string' name='[basket_id]' role='dimension' type='nominal' />
+            <column-instance column='[basket_id]' derivation='None' name='[none:basket_id:nk]' pivot='key' type='nominal' />
+            <column-instance column='[predicted_category]' derivation='None' name='[none:predicted_category:nk]' pivot='key' type='nominal' />
+            <column caption='Predicted Category' datatype='string' name='[predicted_category]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m0h26w18zgyt21a536930q6d2lk].[Exclusions (Basket Id,Predicted Category)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:basket_id:nk]' />
+                <groupfilter function='level-members' level='[none:predicted_category:nk]' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:basket_id:nk]' member='&quot;basket_id&quot;' />
+                <groupfilter function='member' level='[none:predicted_category:nk]' member='&quot;predicted_category&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1m0h26w18zgyt21a536930q6d2lk].[Exclusions (Basket Id,Predicted Category)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]' value='148' />
+            <format attr='width' field='[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]' value='168' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]</rows>
+        <cols>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='2.5' source-height='73'>
+    <window class='worksheet' maximized='true' name='Shopper Classifier'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</field>
+                  <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;basket_id&quot;</value>
+                <value>&quot;predicted_category&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</field>
+            <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Classifier Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</field>
+                  <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;8&quot;</value>
+                <value>&quot;instacart&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:basket_id:nk]</field>
+            <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:predicted_category:nk]</field>
+            <field>[federated.1m0h26w18zgyt21a536930q6d2lk].[none:true_category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Classifier Performance' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Shopper Classifier' width='192'>
+      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
+      LkaMw5fzH5IAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
