@@ -33,6 +33,7 @@ hdfs dfs -rm /user/w205/grocery_shopper_classifier/dh_product/dh_product.csv
 hdfs dfs -rm /user/w205/grocery_shopper_classifier/dh_transaction_data/dh_transaction_data.csv
 hdfs dfs -rm /user/w205/grocery_shopper_classifier/product_mapping/product_mapping.csv
 hdfs dfs -rm /user/w205/grocery_shopper_classifier/dh_days_of_week/dh_days_of_week.csv
+hdfs dfs -rm /user/w205/grocery_shopper_classifier/nb_classifier/classifier_results.csv
 
 # remove hdfs grocery_shopper_classifier directory and sub-directories
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/insta_aisles
@@ -52,6 +53,7 @@ hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/dh_product
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/dh_transaction_data
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/product_mapping
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/dh_days_of_week
+hdfs dfs -rmdir /user/w205/grocery_shopper_classifier/nb_classifier
 hdfs dfs -rmdir /user/w205/grocery_shopper_classifier
 
 # change directory back to the original
