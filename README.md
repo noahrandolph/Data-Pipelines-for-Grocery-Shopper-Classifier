@@ -10,6 +10,6 @@ REQUIREMENTS
 1. In a Linux OS, ensure you have a storage volume attached as '/data' with at least 5 GB available
 2. At least 16 GB of memory
 3. Hadoop Distributed File System
-4. Hive 1.1
+4. Hive 1.1, Hive Metastore, Hiveserver2
 5. Python 3 (packages required: Pyhive; Scikit learn; Pickle; Numpy; Pandas; TCLIService)
 6. Tableau
