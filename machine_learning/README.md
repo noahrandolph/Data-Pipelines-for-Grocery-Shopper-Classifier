@@ -6,3 +6,4 @@ Numpy
 Pyhive
 Scikit-learn
 
+(shopper_classifier_results.py is part of the presentation demo and is not used in the main appliation)
