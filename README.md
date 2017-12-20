@@ -1,4 +1,4 @@
-# W205_Final_Project
+# Data Pipelines for Grocery Shopper Classifier
 
 This application produces a grocery shopper classifier that predicts whether a grocery shopper is an Instacart-type shopper or a standard household grocery shopper.
 
