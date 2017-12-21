@@ -13,3 +13,46 @@ REQUIREMENTS
 4. Hive 1.1, Hive Metastore, Hiveserver2
 5. Python 3 (packages required: Pyhive; Scikit learn; Pickle; Numpy; Pandas; TCLIService)
 6. Tableau
+
+
+
+
+
+
+
+![](README_files/figure-markdown_github/ERD.png)
+
+
+
+
+
+![](README_files/figure-markdown_github/Product_Treemaps.png)
+
+
+
+
+
+![](README_files/figure-markdown_github/Instacart_Days_of_Week.png)
+
+
+
+
+
+![](README_files/figure-markdown_github/DH_days_of_the_week.png)
+
+
+
+
+
+![](README_files/figure-markdown_github/Hour_of_Day_Timing.png)
+
+
+
+
+
+![](README_files/figure-markdown_github/ML.png)
+
+
+
+
+![](README_files/figure-markdown_github/F1.png)
