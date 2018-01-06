@@ -14,45 +14,23 @@ REQUIREMENTS
 5. Python 3 (packages required: Pyhive; Scikit learn; Pickle; Numpy; Pandas; TCLIService)
 6. Tableau
 
-
-
-
-
-
-
+<br><br>
 ![](README_files/figure-markdown_github/ERD.png)
 
-
-
-
-
+<br><br>
 ![](README_files/figure-markdown_github/Product_Treemaps.png)
 
-
-
-
-
+<br><br>
 ![](README_files/figure-markdown_github/Instacart_Days_of_Week.png)
 
-
-
-
-
+<br><br>
 ![](README_files/figure-markdown_github/DH_days_of_the_week.png)
 
-
-
-
-
+<br><br>
 ![](README_files/figure-markdown_github/Hour_of_Day_Timing.png)
 
-
-
-
-
+<br><br>
 ![](README_files/figure-markdown_github/ML.png)
 
-
-
-
+<br><br>
 ![](README_files/figure-markdown_github/F1.png)
